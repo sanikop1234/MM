@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        body {
+            background-color: rgb(0, 255, 8);
+            color: white;
+            animation-name: colorchange;
+            animation-duration: 3s;
+        }
+        h1 {
+            animation-name: fadeIn 4s;
+        }
+        p{
+            animation-name: slideIn;
+            animation-duration: 6s;
+        }
+        @keyframes colorchange {
+            20% {background-color: red;}
+            40% {background-color: white;}
+            60% {background-color: aqua;}
+            80%{ background-color: orangered;}
+            100% {background-color: yellow;}
+        }
+        @keyframes fadeIn {
+            0% {
+                
+                opacity: 0;
+            }
+            100% {
+                
+                opacity: 1;
+            }
+            
+        }
+        @keyframes slideIn {
+             0% {
+                transform: translateX(-100);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Animations in CSS</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus odio ut deserunt ad quo, nisi eligendi. Dicta cumque alias minima, eligendi incidunt, quos odio vero distinctio adipisci vel enim omnis.</p>
+</body>
+</html>

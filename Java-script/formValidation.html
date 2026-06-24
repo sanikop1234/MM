@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for ="username">UserName</label>
+        <input type = "text" id="username" >
+        <br><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+        <br><br>
+
+        <label for="password">PassWord</label>
+        <input type="password" id="password" name="PassWord">
+
+        <br>
+        <br>
+
+        <button type="submit">submit</button>
+    </form>
+    <script>
+        let i = document.getElementById("username");
+        let f = document.querySelector("form");
+        i.addEventListener("keypress", (event) => {
+            const pattern = /^[a-zA-Z]$/;
+
+            if(!pattern.test(event.key)){
+                event.preventDefault();
+            }
+        });
+
+        f.addEventListener("submit", (event) => {
+            event.preventDefault();
+        })
+
+        let un = document.getElementById("username").value.trim();
+
+        let regex = /^[a-zA-Z]+$/;
+        if(un === "") {
+            alert("Warning: Username cannot be empty");
+        } else if (un.length < 2){
+            alert("Warning: username should be more than 2 characters");
+        } else if(un.length > 15) {
+            alert("Warning: username  must not exceed 15 characters");
+        } else if(!regex.test(username)) {
+            alert("only letters");
+
+        } else {
+            alert("Type a valid name");
+        }
+
+        const email = document.getElementById(email).value;
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA_Z0-9.-]+\.[a-zA_Z]{2,}$/;
+
+        if(!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+
+        } else {
+            alert("Valid email");
+        }
+
+        const password = document.getElementById("password").value;
+        const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+        if(!passwordPattern.test(password)) {
+            alert("Password must be at least 8 characters long and include at least one letter and one number.");
+            return false;
+        } else {
+            alert("Password is valid!");
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class list in java</title>
+    <style>
+        .highlight {
+            background-color: red;
+            color: white;
+            font-style: italicformValidation ;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 id="text">Hello everyone. Welcome to kodnest</h1>
+
+    <button onclick="addStyle()">Add Style</button>
+    <button onclick="removeStyle()">Remove Style</button>
+    <button onclick="toggleStyle()">Toggle Style</button>
+    <button onclick="containsStyle()">Contain Style</button>
+
+    <script>
+        txt = document.getElementById("text");
+        function addStyle() {
+            txt.classList.add("highlight");
+        }
+        function removeStyle() {
+            txt.classList.remove("hightlight");
+
+        }
+        function toggleStyle() {
+            txt.classList.toggle("hightlight");
+        }
+        function containsStyle() {
+            if(txt.classList.contains("highlight")) {
+                alert("Hightlight has been  applied");
+            } else {
+                alert("Hightlight has been not applied");
+            }
+        }
+    </script>
+</body>
+</html>
